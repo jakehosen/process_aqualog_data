@@ -64,7 +64,8 @@ dil_sample_name_correction = FALSE
 
 # adjust range of EEMs to cover correction vectors
 #eem_list <- eem_range(eem_list,ex = range(Excor[,1]), em = range(Emcor[,1]))
-eem_list <- eem_range(eem_list,ex = range(Excor[,1]), em = range(Emcor[,1][1],780))
+#eem_list <- eem_range(eem_list,ex = range(Excor[,1]), em = range(Emcor[,1][1],780))
+eem_list <- eem_range(eem_list,ex = c(250,600), em = range(Emcor[,1][1],600))
 
 eem_list <- eem_spectral_cor(eem_list,Excor,Emcor)
 
@@ -82,23 +83,23 @@ eem_list4 <- eem_ife_correction(eem_list3,absorbance, cuvl = 5)
 
 
 
-#eem_list <- eem_raman_normalisation2(eem_list, blank = "blank")
+eem_list4b <- eem_raman_normalisation2(eem_list4, blank = "blank")
 #eem_list <- eem_raman_normalisation(eem_list)
 
-eem_list5 <- eem_extract(eem_list4, c("nano", "miliq", "milliq", "mq", "blank","B1S13SPB04No28","B1S14SPB04No33","B1S14SPB04No29"),ignore_case = TRUE)
+eem_list5 <- eem_extract(eem_list4b, c("nano", "miliq", "milliq", "mq", "blank","B1S13SPB04No28","B1S14SPB04No33","B1S14SPB04No29"),ignore_case = TRUE)
 
 absorbance <- dplyr::select(absorbance, -dplyr::matches("nano|miliq|milliq|mq|blank|B1S13SPB04No28|B1S14SPB04No33|B1S14SPB04No29", ignore.case = TRUE))
 
 
 remove_scatter <- c(TRUE, TRUE, TRUE, TRUE)
-remove_scatter_width <- c(20,15,45,35)
+remove_scatter_width <- c(20,15,30,30)
 
 eem_list_rem <- eem_rem_scat(eem_list5, remove_scatter = remove_scatter, remove_scatter_width = remove_scatter_width)
-
+eem_overview_plot(eem_list_rem, spp=3)
 
 
 eem_list_rem_int <- eem_interp(eem_list_rem, cores = cores, type = 1, extend = FALSE)
-eem_overview_plot(eem_list_rem_int, spp=6)
+eem_overview_plot(eem_list_rem_int, spp=3)
 
 dil_data <- meta["dilution"]
 
@@ -117,8 +118,11 @@ ctol <- 10^-5 # tolerance in PARAFAC analysis
 # calculating PARAFAC models, one for each number of components
 #pf1 <- eem_parafac(eem_list_rem_int, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("uncons", "uncons", "uncons"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
 
+exclude1<-list(sample=c("B1S15S15","B1S1S1","B1S2S2","B1S3S3","B1S4S4","B1S5S5"))
+eem_list_dil2<-eem_exclude(eem_list_dil, exclude1)
+
 # same model but using non-negative constraints
-pf1n <- eem_parafac(eem_list_dil, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("nonneg", "nonneg", "nonneg"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
+pf1n <- eem_parafac(eem_list_dil2, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("nonneg", "nonneg", "nonneg"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
 
 # rescale B and C modes to a maximum fluorescence of 1 for each component
 pf1 <- lapply(pf1, eempf_rescaleBC, newscale = "Fmax")
@@ -137,11 +141,12 @@ eempf_leverage_plot(cpl,qlabel=0.1)
 
 exclude <- eempf_leverage_ident(cpl,qlabel=0.1)
 
-eem_list_ex <- eem_exclude(eem_list_rem_int, exclude)
+eem_list_dil2_ex1 <- eem_exclude(eem_list_dil2, exclude)
 
-pf2n <- eem_parafac(eem_list_ex, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("nonneg", "nonneg", "nonneg"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
+pf2n <- eem_parafac(eem_list_dil2_ex1, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("nonneg", "nonneg", "nonneg"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
+eempf_compare(pf2n)
 
-
+eempf_compare(pf1n)
 
 
 
