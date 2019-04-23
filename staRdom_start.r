@@ -124,18 +124,22 @@ pf1n <- eem_parafac(eem_list_dil, comps = seq(dim_min,dim_max), normalise = FALS
 pf1 <- lapply(pf1, eempf_rescaleBC, newscale = "Fmax")
 pf1n <- lapply(pf1n, eempf_rescaleBC, newscale = "Fmax")
 
+
+
+#compare models
+eempf_compare(pf1n)
+eempf_corplot(pf1n[[4]], progress = FALSE)
+# plot leverage (nice plot)
+
 # calculate leverage
 cpl <- eempf_leverage(pf1n[[4]])
-
-# plot leverage (nice plot)
 eempf_leverage_plot(cpl,qlabel=0.1)
-
 
 exclude <- eempf_leverage_ident(cpl,qlabel=0.1)
 
 eem_list_ex <- eem_exclude(eem_list_rem_int, exclude)
 
-
+pf2n <- eem_parafac(eem_list_ex, comps = seq(dim_min,dim_max), normalise = FALSE, const = c("nonneg", "nonneg", "nonneg"), maxit = maxit, nstart = nstart, ctol = ctol, cores = cores)
 
 
 
