@@ -1,5 +1,8 @@
 options(scipen=999)
 
+
+
+convert_aqualog<-function(){
 library(tcltk)
 #main_folder<-"/Users/prime/gdrive/uf_aqualog/uf_aqualog/20190408/20190408_Group1"
 choose.dir <- function() {
@@ -10,11 +13,13 @@ choose.dir <- function() {
 }
 
 #choose folder where corrected data will be stored.
+cat("\nchoose destination folder")
 destination_folder<-choose.dir()
 
 x<-"yes"
 while(x=="yes"){
 #choose folder where original aqualog data are stored.
+cat("\nchoose folder where original aqualog data are stored.")
 main_folder<-choose.dir()
 
 abs_files<-list.files(main_folder,pattern="*ABS.dat")
@@ -59,7 +64,10 @@ bem_temp2<-bem_temp2[,order(bem_temp2[1,])]
 bem_temp3<-cbind.data.frame(bem_temp[,1],bem_temp2)
 write.table(bem_temp3,paste(eem_cor_folder,"/",gsub("BEM.dat","_blank.csv",bem_files[i],fixed=TRUE),sep=""),row.names=FALSE,col.names=FALSE,sep=",")
 
-cat("Correct Another Folder?")
+cat("\nCorrect Another Folder?")
 x<-readLines(n=1)
 print(x)
 }
+}
+
+convert_aqualog()

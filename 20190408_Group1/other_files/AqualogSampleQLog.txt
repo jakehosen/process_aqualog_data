@@ -1,0 +1,132 @@
+#############################################################################################
+Log File: C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\AqualogSampleQLog.txt
+Date: Wednesday, April 3, 2019
+Time: 3:52:01 PM
+#############################################################################################
+[2019-04-03 15-52-01] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\AqualogSampleQ_20190403.aqu
+[Aqualog Experiment File] C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\AqualogSampleQ_20190403_Exper_2019-04-03-15-52-01.xml
+[Output Destination Folder] C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\
+
+Blank & Sample Setup:
+[Sipper Enabled] False
+[Blank Group 1] B1-B1
+[Blank Group 1: Sample 1] S1-BLANK (Repeats=0)
+[Blank Group 1: Sample 2] S2-BLANK (Repeats=0)
+[Blank Group 1: Sample 3] S3-BLANK (Repeats=0)
+[Blank Group 1: Sample 4] S4-BC55 (Repeats=0)
+[Blank Group 1: Sample 5] S5-BC56 (Repeats=0)
+[Blank Group 1: Sample 6] S6-BC57 (Repeats=0)
+[Blank Group 1: Sample 7] S7-BC58 (Repeats=0)
+[Blank Group 1: Sample 8] S8-BC59 (Repeats=0)
+[Blank Group 1: Sample 9] S9-BC60 (Repeats=0)
+[Blank Group 1: Sample 10] S10-BC61 (Repeats=0)
+[Blank Group 1: Sample 11] S11-BC62 (Repeats=0)
+[Blank Group 1: Sample 12] S12-BC63 (Repeats=0)
+[Blank Group 1: Sample 13] S13-BC64 (Repeats=0)
+[Blank Group 1: Sample 14] S14-BC65 (Repeats=0)
+[Total Number of Samples] 14
+
+Post Processing Options:
+
+Export Options:
+ABS = True
+OGW = True
+ASCII = True
+PCT = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+################################################################################
+[2019-04-03 15-52-01] STARTING Aqualog SampleQ Execution
+[2019-04-03 15-58-20] Experiment 01 of 15 [Blank 1] Start Done
+[2019-04-03 16-02-09] Experiment 02 of 15 [Blank 1, Sample 1, Repeat 0] Start Done
+[2019-04-03 16-07-18] Experiment 03 of 15 [Blank 1, Sample 2, Repeat 0] Start Done
+[2019-04-03 16-12-28] Experiment 04 of 15 [Blank 1, Sample 3, Repeat 0] Start Done
+[2019-04-03 16-18-54] Experiment 05 of 15 [Blank 1, Sample 4, Repeat 0] Start Done
+[2019-04-03 16-24-03] Experiment 06 of 15 [Blank 1, Sample 5, Repeat 0] Start Done
+[2019-04-03 16-29-12] Experiment 07 of 15 [Blank 1, Sample 6, Repeat 0] Start Done
+[2019-04-03 16-34-22] Experiment 08 of 15 [Blank 1, Sample 7, Repeat 0] Start Done
+[2019-04-03 16-41-32] Experiment 09 of 15 [Blank 1, Sample 8, Repeat 0] Start Done
+[2019-04-03 16-46-42] Experiment 10 of 15 [Blank 1, Sample 9, Repeat 0] Start Done
+[2019-04-03 16-51-51] Experiment 11 of 15 [Blank 1, Sample 10, Repeat 0] Start Done
+[2019-04-03 16-57-00] Experiment 12 of 15 [Blank 1, Sample 11, Repeat 0] Start Done
+[2019-04-03 17-03-20] Experiment 13 of 15 [Blank 1, Sample 12, Repeat 0] Start Done
+[2019-04-03 17-08-29] Experiment 14 of 15 [Blank 1, Sample 13, Repeat 0] Start Done
+[2019-04-03 17-13-39] Experiment 15 of 15 [Blank 1, Sample 14, Repeat 0] Start Done
+[2019-04-03 17-18-49] COMPLETED Aqualog SampleQ Execution
+--------------------------------------------------------------------------------
+
+
+#############################################################################################
+Log File: C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\AqualogSampleQLog.txt
+Date: Monday, April 8, 2019
+Time: 1:17:11 PM
+#############################################################################################
+[2019-04-08 13-17-11] 
+Aqualog Sample Q Experimental Parameters:
+[Aqualog Sample Q File] C:\Users\Public\Documents\Jobin Yvon\Data\20190408\AqualogSampleQ_20190408.aqu
+[Aqualog Experiment File] C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\AqualogSampleQ_20190408_Exper_2019-04-08-13-17-11.xml
+[Output Destination Folder] C:\Users\Public\Documents\Jobin Yvon\Data\20190403\20190403JT\
+
+Blank & Sample Setup:
+[Sipper Enabled] False
+[Blank Group 1] B1-B1
+[Blank Group 1: Sample 1] S1-S1 (Repeats=0)
+[Blank Group 1: Sample 2] S2-S2 (Repeats=0)
+[Blank Group 1: Sample 3] S3-S3 (Repeats=0)
+[Blank Group 1: Sample 4] S4-S4 (Repeats=0)
+[Blank Group 1: Sample 5] S5-S5 (Repeats=0)
+[Blank Group 1: Sample 6] S6-S6 (Repeats=0)
+[Blank Group 1: Sample 7] S7-S7 (Repeats=0)
+[Blank Group 1: Sample 8] S8-S8 (Repeats=0)
+[Blank Group 1: Sample 9] S9-S9 (Repeats=0)
+[Blank Group 1: Sample 10] S10-S10 (Repeats=0)
+[Blank Group 1: Sample 11] S11-S11 (Repeats=0)
+[Blank Group 1: Sample 12] S12-S12 (Repeats=0)
+[Blank Group 1: Sample 13] S13-S13 (Repeats=0)
+[Blank Group 1: Sample 14] S14-S14 (Repeats=0)
+[Blank Group 1: Sample 15] S15-S15 (Repeats=0)
+[Total Number of Samples] 15
+
+Post Processing Options:
+
+Export Options:
+ABS = True
+OGW = True
+ASCII = True
+PCT = True
+BEM = True
+SEM = True
+
+Delay Options:
+Single Cell Kinetics = False
+Delay Before First Blank = 0 Seconds
+Delay Between Each Experiment = 0 Seconds
+################################################################################
+[2019-04-08 13-17-11] STARTING Aqualog SampleQ Execution
+[2019-04-08 13-17-14] Experiment 01 of 16 [Blank 1] Start Done
+[2019-04-08 13-20-59] Experiment 02 of 16 [Blank 1, Sample 1, Repeat 0] Start Done
+[2019-04-08 13-26-07] Experiment 03 of 16 [Blank 1, Sample 2, Repeat 0] Start Done
+[2019-04-08 13-31-15] Experiment 04 of 16 [Blank 1, Sample 3, Repeat 0] Start Done
+[2019-04-08 13-38-45] Experiment 05 of 16 [Blank 1, Sample 4, Repeat 0] Start Done
+[2019-04-08 13-43-52] Experiment 06 of 16 [Blank 1, Sample 5, Repeat 0] Start Done
+[2019-04-08 13-48-59] Experiment 07 of 16 [Blank 1, Sample 6, Repeat 0] Start
+[2019-04-08 13-54-01] ##### WARNING: CCD SATURATION OCCURRED ##### Done
+[2019-04-08 13-54-07] Experiment 08 of 16 [Blank 1, Sample 7, Repeat 0] Start Done
+[2019-04-08 14-38-04] Experiment 09 of 16 [Blank 1, Sample 8, Repeat 0] Start Done
+[2019-04-08 14-43-12] Experiment 10 of 16 [Blank 1, Sample 9, Repeat 0] Start
+[2019-04-08 14-48-13] ##### WARNING: CCD SATURATION OCCURRED ##### Done
+[2019-04-08 14-48-19] Experiment 11 of 16 [Blank 1, Sample 10, Repeat 0] Start Done
+[2019-04-08 14-53-27] Experiment 12 of 16 [Blank 1, Sample 11, Repeat 0] Start Done
+[2019-04-08 15-03-35] Experiment 13 of 16 [Blank 1, Sample 12, Repeat 0] Start Done
+[2019-04-08 15-08-44] Experiment 14 of 16 [Blank 1, Sample 13, Repeat 0] Start Done
+[2019-04-08 15-14-15] Experiment 15 of 16 [Blank 1, Sample 14, Repeat 0] Start Done
+[2019-04-08 15-19-46] Experiment 16 of 16 [Blank 1, Sample 15, Repeat 0] Start Done
+[2019-04-08 15-25-17] COMPLETED Aqualog SampleQ Execution
+--------------------------------------------------------------------------------
